@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  @apply bg-accent min-h-screen;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+thead th {
+  @apply text-sm font-semibold bg-primary text-white !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+tbody {
+  @apply text-sm;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.table :where(td) {
+  padding: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+
+.table :where(th, td):first-child {
+  padding-left: 2.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table :where(th, td):last-child {
+  padding-right: 1.5rem;
+}
+
+input,
+select,
+textarea {
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+input {
+  @apply input input-bordered input-info;
+}
+
+select {
+  @apply select select-secondary;
+}
+
+textarea {
+  @apply textarea textarea-secondary;
+}
+
+tbody a,
+tbody label,
+tbody button {
+  @apply btn btn-sm btn-ghost;
 }
